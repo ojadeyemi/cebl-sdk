@@ -34,7 +34,7 @@ classifiers = [
 
 
 [tool.setuptools.packages.find]
-where = ["cebl"]
+where = ["."]
 include = ["cebl"]
 
 [tool.pytest.ini_options]
