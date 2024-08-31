@@ -37,6 +37,9 @@ classifiers = [
 where = ["."]
 include = ["cebl"]
 
+[tool.setuptools.package-data]
+"cebl" = ["config.json"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 filterwarnings = ["error"]
