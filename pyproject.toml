@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "cebl"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
     "requests>=2.32",
     "pandas>=2.2",
@@ -20,7 +20,7 @@ readme = "README.md"
 license = { file = "LICENSE" }
 
 classifiers = [
-    "Development Status :: 5 - Production/Stable",
+    "Development Status :: 4 - Beta",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Intended Audience :: Developers",

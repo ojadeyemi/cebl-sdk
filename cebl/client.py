@@ -44,6 +44,9 @@ class CEBLClient:
             CEBL_API_KEY (str): API key for authentication.
             api_config (dict): Configuration for the API client, including base URL and endpoints.
         """
+        if not CEBL_API_KEY:
+            raise ValueError("API key must be provided")
+
         self.headers = {
             "X-Api-Key": CEBL_API_KEY,
             "Accept": "application/json, text/plain, */*",

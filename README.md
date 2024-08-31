@@ -1,4 +1,6 @@
-# CEBL SDK Client
+# 🏀 CEBL SDK Client
+
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 
 The CEBL SDK Client allows you to interact with the CEBL API to retrieve various statistics and data related to the [Canadian Elite Basketball League (CEBL)](https://www.cebl.ca/). This SDK simplifies the process of fetching and utilizing CEBL data in your Python projects.
 
@@ -18,7 +20,7 @@ To run this project, you will need to add the following environment variables to
 CEBL_API_KEY=<A_VALID_API_KEY>
 ```
 
-## Installation
+## 📥 Installation
 
 Install with pip
 
@@ -111,6 +113,19 @@ plt.ylim(510, -10)
 
 plt.show()
 ```
+
+## Author
+
+This package was developed by OJ Adeyemi.
+
+## Contributing
+
+Contributions, bug reports, and feature requests are welcome! Please feel free to open an issue or submit a pull request on [GitHub](https://github.com/ojadeyemi/cebl-sdk).
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+for details.
 
 ---
 

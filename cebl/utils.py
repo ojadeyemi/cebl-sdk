@@ -77,14 +77,18 @@ def make_request(
 
     try:
         response = requests.get(url, headers=headers, params=params, timeout=timeout)
+
         if response.status_code == 200:
             return response.json()
+        elif response.status_code == 401:
+            logging.error("Unauthorized access. The API key may be invalid or expired.")
+            raise PermissionError("Unauthorized access. The API key may be invalid or expired.")
         else:
             logging.error(f"Request to {url} failed with status code {response.status_code}. Response: {response.text}")
-            return None
+            response.raise_for_status()  # Raises HTTPError for bad responses
     except requests.RequestException as e:
         logging.error(f"Request failed: {e}")
-        return None
+        raise  # Re-raise the exception to notify the caller
 
 
 def print_request_headers(url: str, headers: dict[str, str]) -> None:
