@@ -1,0 +1,63 @@
+{
+  "base_url": "https://api.data.cebl.ca",
+  "endpoints": {
+    "games": {
+      "path": "/games/{year}",
+      "params": {
+        "year": ["2019", "2020", "2021", "2022", "2023", "2024"]
+      }
+    },
+    "teams": {
+      "path": "/teams/{year}",
+      "params": {
+        "year": ["2019", "2020", "2021", "2022", "2023", "2024"]
+      }
+    },
+    "player": {
+      "path": "/players/{player_id}"
+    },
+    "player_statistics": {
+      "path": "/players/{player_id}/statistics",
+      "params": {
+        "mode": ["PER_GAME", "TOTALS"],
+        "career_only": ["true", "false"],
+        "competition": ["REGULAR", "FINALS"]
+      }
+    },
+    "players_statistics_aggregated": {
+      "path": "/players/statistics/aggregated",
+      "params": {
+        "season": ["2019", "2020", "2021", "2022", "2023", "2024"],
+        "mode": ["PER_GAME", "TOTALS"],
+        "competition": ["REGULAR", "PLAYOFFS"],
+        "segment": ["EAST", "WEST", "HOME", "AWAY"],
+        "team_id": "{team_id}"
+      }
+    },
+    "team_roster": {
+      "path": "/teams/{team_id}/roster/{year}",
+      "params": {
+        "year": ["2019", "2020", "2021", "2022", "2023", "2024"]
+      }
+    },
+    "teams_statistics_aggregated": {
+      "path": "/teams/statistics/aggregated",
+      "params": {
+        "season": ["2019", "2020", "2021", "2022", "2023", "2024"],
+        "mode": ["PER_GAME", "TOTALS"],
+        "competition": ["REGULAR", "PLAYOFFS"],
+        "segment": [
+          "HOME",
+          "AWAY",
+          "L7D",
+          "L5G",
+          "L10G",
+          "May",
+          "June",
+          "July",
+          "August"
+        ]
+      }
+    }
+  }
+}

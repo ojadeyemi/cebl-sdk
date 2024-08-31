@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=46.1.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cebl"
+version = "0.1.0"
+dependencies = [
+    "requests>=2.32",
+    "pandas>=2.2",
+    "matplotlib>=3.9.2",
+    "python-dotenv>=1.0.1",
+    "seaborn>=0.13.2",
+]
+requires-python = ">=3.10"
+description = "A Python package for CEBL statistics"
+authors = [{ name = "OJ Adeyemi", email = "ojieadeyemi@gmail.com" }]
+maintainers = [{ name = "OJ Adeyemi", email = "ojieadeyemi@gmail.com" }]
+readme = "README.md"
+license = { file = "LICENSE" }
+
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: Implementation :: CPython",
+]
+
+
+[tool.setuptools.packages.find]
+where = ["cebl"]
+include = ["cebl"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["error"]
+
+[project.optional-dependencies]
+test = ["pytest==8.4"]

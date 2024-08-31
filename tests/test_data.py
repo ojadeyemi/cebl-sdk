@@ -1,0 +1,37 @@
+def create_specific_player_mock_response():
+    """Real data of a player from the CEBL 2023 season for integration testing"""
+    return [
+        {
+            "id": 145,
+            "season": 2023,
+            "team_id": 15,
+            "team_name_en": "Saskatchewan Rattlers",
+            "team_short_name_en": "Saskatchewan",
+            "team_name_fr": "Rattlers de la Saskatchewan",
+            "team_short_name_fr": "Saskatchewan",
+            "team_logo_url": "https://se-img.dcd-production.i.geniussports.com/ebece3522253a5acf00c4acc033aa336M1.png",
+            "played": 18,
+            "minutes": "608.3",
+            "points": "525.0",
+            "field_goals_made": "168.0",
+            "field_goals_attempted": "339.0",
+            "field_goal_percentage": "49.6",
+            "three_points_made": "70.0",
+            "three_points_attempted": "156.0",
+            "three_point_percentage": "44.9",
+            "free_throws_made": "119.0",
+            "free_throws_attempted": "147.0",
+            "free_throw_percentage": "81.0",
+            "offensive_rebounds": "6.0",
+            "defensive_rebounds": "88.0",
+            "rebounds": "94.0",
+            "assists": "76.0",
+            "turn_overs": "69.0",
+            "steals": "29.0",
+            "blocks": "4.0",
+            "fouls": "25.0",
+            "double_doubles": "2.0",
+            "triple_doubles": "0.0",
+            "target_scores": "4.0",
+        }
+    ]
