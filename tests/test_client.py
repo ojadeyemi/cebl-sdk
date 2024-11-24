@@ -97,9 +97,7 @@ def test_verify_player_statistics(api_client):
     player_id = 145
     mode = "TOTALS"
     competition = "REGULAR"
-    result = api_client.get_player_statistics(
-        player_id=player_id, mode=mode, competition=competition
-    )
+    result = api_client.get_player_statistics(player_id=player_id, mode=mode, competition=competition)
 
     assert isinstance(result, pd.DataFrame)
     assert not result.empty

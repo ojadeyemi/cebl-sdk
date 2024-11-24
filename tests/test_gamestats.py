@@ -1,5 +1,3 @@
-import os
-
 import pytest
 
 from cebl.gamestats import CEBLGameDataProvider

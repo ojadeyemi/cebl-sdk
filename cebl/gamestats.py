@@ -5,6 +5,7 @@ import pandas as pd
 from pandas import DataFrame
 
 from .client import CEBLClient
+from .constants import YearType
 from .utils import make_request
 
 
@@ -96,7 +97,7 @@ class CEBLGameDataProvider:
             logging.error("Error extracting shot data from game data: %s", e)
             return pd.DataFrame(), pd.DataFrame()
 
-    def get_team_shot_data(self, client: CEBLClient, year: int, team_name: str) -> DataFrame:
+    def get_team_shot_data(self, client: CEBLClient, year: YearType, team_name: str) -> DataFrame:
         """
         Retrieves shot data for a specific team over a season.
 
@@ -113,7 +114,9 @@ class CEBLGameDataProvider:
             team_shots = []
 
             for _, game in games.iterrows():
-                if game["status"] == "COMPLETE" and (game["home_team_name"] == team_name or game["away_team_name"] == team_name):
+                if game["status"] == "COMPLETE" and (
+                    game["home_team_name"] == team_name or game["away_team_name"] == team_name
+                ):
                     game_data = self.get_game_data(game["stats_url_en"])
                     if game_data:
                         home_shots, away_shots = self.get_shot_data(game["stats_url_en"])
@@ -145,7 +148,7 @@ class CEBLGameDataProvider:
             )
             return pd.DataFrame()
 
-    def get_player_shot_data(self, client: CEBLClient, year: int, team_name: str, player_name: str) -> DataFrame:
+    def get_player_shot_data(self, client: CEBLClient, year: YearType, team_name: str, player_name: str) -> DataFrame:
         """
         Retrieves shot data for a specific player over a season.
 
@@ -163,7 +166,9 @@ class CEBLGameDataProvider:
             player_shots = []
 
             for _, game in games.iterrows():
-                if game["status"] == "COMPLETE" and (game["home_team_name"] == team_name or game["away_team_name"] == team_name):
+                if game["status"] == "COMPLETE" and (
+                    game["home_team_name"] == team_name or game["away_team_name"] == team_name
+                ):
                     game_data = self.get_game_data(game["stats_url_en"])
                     if game_data:
                         home_shots, away_shots = self.get_shot_data(game["stats_url_en"])
